@@ -31,6 +31,7 @@
 # major testing and validation is performed.
 
 # More information at: https://github.com/jamfprofessionalservices/DEP-Notify
+# Updated by Scott Adamson Dec 2021
 
 #########################################################################################
 # Testing Mode
