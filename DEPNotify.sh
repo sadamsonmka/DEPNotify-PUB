@@ -843,7 +843,10 @@ POLICY_ARRAY_BASIC=(
 	  if [ "$REG_POPUP_LABEL_4" != "" ]; then REG_POPUP_LABEL_4_LOGIC; fi
   fi
 
-# Loop to run defaut policies
+## Adjust LABEL Value to match one of the pull-down variables
+## Adjust POLICY ARRAY_XX to match Policy above
+
+# Loop to run DEFAULT policies
 if [ "$REG_POPUP_LABEL_2_VALUE" = "Staff" ]; then
   for POLICY in "${POLICY_ARRAY[@]}"; do
 	echo "Status: $(echo "$POLICY" | cut -d ',' -f1)" >> "$DEP_NOTIFY_LOG"
@@ -853,7 +856,7 @@ if [ "$REG_POPUP_LABEL_2_VALUE" = "Staff" ]; then
 	  "$JAMF_BINARY" policy "-$TRIGGER" "$(echo "$POLICY" | cut -d ',' -f2)"
 	fi
 	done
-# Loop to run Student policies
+# Loop to run STUDENT policies
 elif [[ "$REG_POPUP_LABEL_2_VALUE" = "Student" ]]; then
 	for POLICY in "${POLICY_ARRAY_STUDENT[@]}"; do 
 		echo "Status: $(echo "$POLICY" | cut -d ',' -f1)" >> "$DEP_NOTIFY_LOG"
@@ -863,7 +866,7 @@ elif [[ "$REG_POPUP_LABEL_2_VALUE" = "Student" ]]; then
 			"$JAMF_BINARY" policy "-$TRIGGER" "$(echo "$POLICY" | cut -d ',' -f2)"
 		fi
 	done
-# Loop to run Faculty policies
+# Loop to run FACULTY policies
 elif [[ "$REG_POPUP_LABEL_2_VALUE" = "Faculty" ]]; then
 	for POLICY in "${POLICY_ARRAY_STUDENT[@]}"; do 
 		echo "Status: $(echo "$POLICY" | cut -d ',' -f1)" >> "$DEP_NOTIFY_LOG"
