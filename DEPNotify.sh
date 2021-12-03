@@ -32,6 +32,7 @@
 
 # More information at: https://github.com/jamfprofessionalservices/DEP-Notify
 # Updated by Scott Adamson Dec 2021 for EDU Environment and AUP (vs. EULA)
+# Included some basic logic to push a policy based on the user role
 
 #########################################################################################
 # Testing Mode
