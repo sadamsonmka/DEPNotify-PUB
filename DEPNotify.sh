@@ -31,7 +31,7 @@
 # major testing and validation is performed.
 
 # More information at: https://github.com/jamfprofessionalservices/DEP-Notify
-# Updated by Scott Adamson Dec 2021
+# Updated by Scott Adamson Dec 2021 for EDU Environment and AUP (vs. EULA)
 
 #########################################################################################
 # Testing Mode
@@ -40,7 +40,7 @@
 # Auto removal of BOM files to reduce errors
 # Sleep commands instead of policies or other changes being called
 # Quit Key set to command + control + x
-  TESTING_MODE=false # Set variable to true or false
+  TESTING_MODE=true # Set variable to true or false
 
 #########################################################################################
 # General Appearance
