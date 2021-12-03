@@ -66,7 +66,7 @@
 # Paragraph text that will display under the main heading. For a new line, use \n
 # If this variable is left blank, the generic message will appear. Leave single
 # quotes below as double quotes will break the new lines.
-  MAIN_TEXT='Please wait while we prepare your computer here at '$ORG_NAME'! We want you to have a few applications and settings configured before you get started with your new Mac. This process should take about 10 minutes to complete. \n \n If you need additional software or help, please visit the MKA Resources app in your Applications folder or on your Dock.'
+  MAIN_TEXT='Please wait while we prepare your computer here at '$ORG_NAME'! We want you to have a few applications and settings configured before you get started with your new Mac. This process should take about 10 minutes to complete. \n \n If you need additional software or help, please visit the ORG Resources app in your Applications folder or on your Dock.'
 
 # Initial Start Status text that shows as things are firing up
   INITAL_START_STATUS="Initial Configuration Starting..."
@@ -133,7 +133,7 @@ INSTALL_COMPLETE_TEXT="Now, get to work!"
 # Paragraph text that will display under the main heading. For a new line, use \n
 # If this variable is left blank, the generic message will appear. Leave single
 # quotes below as double quotes will break the new lines.
-	ERROR_MAIN_TEXT='We are sorry that you are experiencing this inconvenience with your new Mac. However, we have the nerds to get you back up and running in no time! \n \n Please contact MKA Support right away and we will take a look at your computer ASAP. \n \n'	
+	ERROR_MAIN_TEXT='We are sorry that you are experiencing this inconvenience with your new Mac. However, we have the nerds to get you back up and running in no time! \n \n Please contact ORG Support right away and we will take a look at your computer ASAP. \n \n'	
 	ERROR_MAIN_TEXT="$ERROR_MAIN_TEXT $SUPPORT_CONTACT_DETAILS"	
 	  
 # Error status message that is displayed under the progress bar
@@ -246,7 +246,7 @@ POLICY_ARRAY_BASIC=(
 	EULA_BUTTON="Read and Agree to AUP"
 
   # EULA Screen Title
-	EULA_MAIN_TITLE="MKA Acceptable Use Policy"
+	EULA_MAIN_TITLE="ORG Acceptable Use Policy"
 
   # EULA Subtitle
 	EULA_SUBTITLE="Please agree to the following terms and conditions to start configuration of this Mac"
@@ -617,7 +617,7 @@ POLICY_ARRAY_BASIC=(
 	echo "$(date "+%a %h %d %H:%M:%S"): Self Service custom branding icon has been loaded. Killing Self Service PID $SELF_SERVICE_PID." >> "$DEP_NOTIFY_DEBUG"
 	kill "$SELF_SERVICE_PID"
   elif [ ! -f "$BANNER_IMAGE_PATH" ];then
-	BANNER_IMAGE_PATH="/Applications/MKA Resources.app/Contents/Resources/AppIcon.icns"
+	BANNER_IMAGE_PATH="/Applications/ORG Resources.app/Contents/Resources/AppIcon.icns"
   fi
 
 # Setting custom image if specified
